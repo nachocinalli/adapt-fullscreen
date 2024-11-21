@@ -1,0 +1,15 @@
+{
+  "name": "adapt-fullscreen",
+  "version": "1.0.0",
+  "framework": ">=5.31.11",
+  "homepage": "",
+  "bugs": "",
+  "extension": "fullscreen",
+  "displayName": "Fullscreen",
+  "description": "An extension to allow the course to be viewed in fullscreen mode.",
+  "main": "/js/adapt-fullscreen.js",
+  "keywords": ["adapt-plugin", "adapt-extension"],
+  "license": "GPL-3.0",
+  "targetAttribute": "_fullscreen",
+  "private": true
+}

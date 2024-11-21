@@ -1,0 +1,32 @@
+{
+  "$anchor": "fullscreen-course",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$patch": {
+    "source": {
+      "$ref": "course"
+    },
+    "with": {
+      "properties": {
+   
+        "_fullscreen": {
+          "type": "object",
+          "title": "Fullscreen",
+          "default": {},
+          "required": [
+            "_level",
+            "title"
+          ],
+          "properties": {
+            "_isEnabled": {
+              "type": "boolean",
+              "title": "Enable",
+              "description": "Controls whether the extension is enabled or disabled",
+              "default": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

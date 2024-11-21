@@ -1,0 +1,98 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+   "globals": {
+        "_navOrder": {
+            "type": "number",
+            "required": true,
+            "title": "Navigation bar order",
+            "help": "Determines the order in which the button is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.",
+            "default": 99,
+            "inputType": "Text"
+        },
+        "_showLabel": {
+            "type": "boolean",
+            "required": true,
+            "default": true,
+            "title": "Enable navigation bar button label",
+            "inputType": "Checkbox",
+            "help": "Controls whether a label is shown on the navigation bar button."
+        },
+        "navLabel": {
+            "type": "string",
+            "required": true,
+            "default": "Fullscreen mode",
+            "title": "Navigation bar button label",
+            "inputType": "Text",
+            "translatable": true
+        },
+        "_navTooltip": {
+            "type": "object",
+            "title": "Navigation tooltip",
+            "properties": {
+                "_isEnabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "title": "Enable tooltip for navigation button",
+                    "inputType": "Checkbox",
+                    "validators": []
+                },
+                "text": {
+                    "type": "string",
+                    "title": "Text",
+                    "default": "{{ariaLabel}}",
+                    "help": "The tooltip text to display on hover over this item",
+                    "inputType": "Text",
+                    "validators": [],
+                    "translatable": true
+                }
+            }
+        }
+    },
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object",
+          "properties": { 
+            "_fullscreen": {
+              "type": "object",
+              "required": false,
+              "legend": "Fullscreen",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required": true,
+                  "default": true,
+                  "title": "Is enabled",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Controls whether the howler extension is enabled or disabled."
+                }
+              }
+            }
+          }
+        },
+        "contentobject": {
+          "type": "object"       
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
